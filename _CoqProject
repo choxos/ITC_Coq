@@ -1,0 +1,33 @@
+# ITC_Coq: Formal Proofs of Indirect Treatment Comparisons
+#
+# This project formalizes propensity score theory, doubly robust estimation,
+# and MAIC vs STC comparison using measure-theoretic foundations.
+#
+# Dependencies:
+#   coq-mathcomp-ssreflect >= 2.0
+#   coq-mathcomp-algebra
+#   coq-mathcomp-analysis >= 1.9.0
+#   coq-hierarchy-builder >= 1.6.0
+
+-R theories ITC
+
+# Phase 1: Foundations
+theories/Axioms.v
+theories/BasicTypes.v
+theories/PotentialOutcomes.v
+theories/CausalAssumptions.v
+
+# Phase 2: Core Theory
+theories/ConditionalIndep.v
+theories/BalancingScore.v
+theories/PropensityScore.v
+
+# Phase 3: Estimators
+theories/IPWEstimator.v
+theories/OutcomeRegression.v
+theories/DoublyRobust.v
+
+# Phase 4: ITC Methods
+theories/MAIC.v
+theories/STC.v
+theories/Comparison.v
